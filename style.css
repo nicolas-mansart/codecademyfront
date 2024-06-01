@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Nunito, serif;
+    margin: 0;
+    --background: #FFF;
+    --background-alt: #DDD;
+    --color: #333;
+    --color-alt: #000;
+    background-color: var(--background);
+    color: var(--color);
+    transition-property: color, background-color;
+    transition-duration: 0.2s;
+}
+
+body.darkmode {
+    --background: #111;
+    --background-alt: #222;
+    --color: #DDD;
+    --color-alt: #FFF;
+    background-color: var(--background);
+    color: var(--color);
+}
+
+header {
+    background-color: #333;
+    color: #EEE;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .container>* {
+    min-height: 4rem;
+}
+
+header nav {
+    flex-grow: 1;
+}
+
+header .titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1,
+header h2 {
+    margin: 0;
+    line-height: 1em;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header h2 {
+    font-size: 0.6rem;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav a {
+    display: block;
+    padding: 0.3em 1em;
+    color: #CCC;
+    transition: all 0.3s;
+}
+
+header nav a:hover {
+    color: #EEE;
+    padding: 0.2em 1em 0.4em;
+}
+
+header #head-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header #head-right button {
+    border: none;
+    background: none;
+    color: #EEE;
+    cursor: pointer;
+    padding: 1rem;
+}
+#burg {display: none;}
+
+
+body:not(.darkmode) #head-right .fa-sun {display: none;}
+body.darkmode #head-right .fa-moon {display: none;}
+
+
+.container,
+section>h2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.container.smaller {
+    max-width: 800px;
+}
+
+section {
+    padding-top: 5rem;
+    background: var(--background);
+    color: var(--color);
+    transition-property: color, background-color;
+    transition-duration: 0.2s;
+}
+
+section>h2 {
+    margin: 0 auto 1em;
+}
+
+section:nth-child(even) {
+    background: var(--background-alt);
+    color: var(--color-alt);
+}
+
+.separator {
+    height: 20vh;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 5rem;
+    background-color: #000;
+}
+
+.separator#sep1 {
+    background-image: url('img/bg1.jpg');
+}
+
+.separator#sep2 {
+    background-image: url('img/bg2.jpg');
+}
+
+.separator#sep3 {
+    background-image: url('img/bg3.jpg');
+}
+
+footer {
+    padding: 4em 0;
+    background-color: #333;
+    color: #EEE;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.projectlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.projectlist .project {
+    flex-basis: calc(33% - 2rem);
+    flex-grow: 0;
+}
+.projectlist .project img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#skills .container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+#skills .container .category {
+    flex-basis: calc(50% - 0.5em);
+    flex-grow: 0;
+}
+
+#skills i {
+    width: 1.5em;
+}
+
+form {
+    display: none;
+    flex-direction: column;
+    align-content: flex-start;
+}
+form button {
+    align-self: flex-end;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+}
+form input, form textarea {
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+    header nav {
+        position: absolute;
+        background-color: #555;
+        top: 4rem;
+        height: calc(100vh - 4rem);
+        right: -100vw;
+        width: 100vw;
+        transition: all 0.3s;
+    }
+
+    header.open nav {
+        right: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+    #burg {display: block;}
+    .projectlist {
+        flex-direction: column;
+        gap:2rem;
+    }
+}

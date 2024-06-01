@@ -1,9 +1,154 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-  <h1>Hello World.</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web developer - Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="darkmodes">
+    <header>
+        <div class="container">
+            <div class="titles">
+                <h2>Nicolas Mansart</h2>
+                <h1>Web developer</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="head-right">
+                <button id="dm"><i class="fa fa-moon"></i><i class="fa fa-sun"></i></button>
+                <button id="burg"><i class="fa fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <div class="smaller container">
+                <p>
+                    Hi there! I'm Nicolas Mansart, a passionate front-end developer with a knack for crafting
+                    beautiful and functional user experiences. I bring more than a decade of experience to the table,
+                    specializing in building user-friendly interfaces that are both visually stunning and performant
+                    across all
+                    devices.
+                </p>
+                <h3>What I do</h3>
+                <ul>
+                    <li>I translate design mockups and prototypes into clean, responsive HTML, CSS, and JavaScript.</li>
+                    <li>I have a strong foundation in front-end frameworks like React.</li>
+                    <li>I'm proficient in accessibility best practices and strive to create inclusive experiences for
+                        everyone.
+                    </li>
+                    <li>I stay up-to-date with the latest web development trends and technologies to ensure my projects
+                        are
+                        innovative and future-proof.</li>
+                </ul>
+                <h3>Beyond the code</h3>
+                <p>
+                    While I love coding, I understand the importance of effective communication and collaboration.
+                    I'm a team player who enjoys working closely with designers, back-end developers,
+                    and other stakeholders to bring projects to life.
+                </p>
+                <p>
+                    I'm always eager to learn new things and take on challenging projects.
+                    If you're looking for a skilled and enthusiastic front-end developer, let's chat!
+                </p>
+            </div>
+            <div class="separator" id="sep1"></div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="container">
+                <div class="projectlist">
+                    <div class="project">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Codecademy.svg" alt="Codecademy logo">
+                        <h3>Front-end dev certification</h3>
+                        <p>A comprehensive course that helped me update my front-end development skills</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Codecademy.svg" alt="Codecademy logo">
+                        <h3>Front-end dev certification</h3>
+                        <p>A comprehensive course that helped me update my front-end development skills</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Codecademy.svg" alt="Codecademy logo">
+                        <h3>Front-end dev certification</h3>
+                        <p>A comprehensive course that helped me update my front-end development skills</p>
+                    </div>
+                </div>
+            </div>
+            <div class="separator" id="sep2"></div> 
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="smaller container">
+                <div class="category">
+                    <h3>Front-end languages and frameworks</h3>
+                    <div class="list">
+                        <div class="item"><i class="fab fa-html5"></i> HTML</div>
+                        <div class="item"><i class="fab fa-css3-alt"></i> CSS</div>
+                        <div class="item"><i class="fab fa-js"></i> Javascript</div>
+                        <div class="item"><i class="fab fa-react"></i> React</div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Carefully tested against</h3>
+                    <div class="list">
+                        <div class="item"><i class="fab fa-chrome"></i> Chrome</div>
+                        <div class="item"><i class="fab fa-firefox"></i> Firefox</div>
+                        <div class="item"><i class="fab fa-safari"></i> Safari</div>
+                        <div class="item"><i class="fa fa-mobile"></i> Mobile/Responsive</div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>Tools</h3>
+                    <div class="list">
+                        <div class="item"><i class="fab fa-figma"></i> Figma</div>
+                        <div class="item"><i class="fab fa-git"></i> Git/Github</div>
+                        <div class="item"><i class="fas fa-terminal"></i> Terminal/SSH</div>
+                        <div class="item"><i class="fab fa-node"></i> Node/NPM</div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h3>I can do backend too</h3>
+                    <div class="list">
+                        <div class="item"><i class="fab fa-php"></i> PHP</div>
+                        <div class="item"><i class="fab fa-symfony"></i> Symfony</div>
+                        <div class="item"><i class="fa fa-database"></i> Mysql/MariaDB</div>
+                        <div class="item"><i class="fab fa-wordpress"></i> Wordpress</div>
+                    </div>
+                </div>
+
+                
+
+                <div id="skills-container">
+                </div>
+            </div>
+            <div class="separator" id="sep3"></div>
+        </section>
+    </main>
+    <footer>
+        Nicolas Mansart, développeur web sur Tours et à distance. <br>
+        Mentions légales : TVA non applicable (selon l’article 293 B du CGI). 
+    </footer>
 </body>
 
 </html>
+<html>
